@@ -15,14 +15,16 @@ public class Solution {
             try{
                Pattern.compile(inp);
                System.out.println("Valid");
-            }catch(Exception e){
+            }catch(PatternSyntaxException e){
                   System.out.println("Invalid");
 
             }
         }
+        sc.close();
 
     }
 }
+
 #Java String Tokens
 
 import java.io.*;

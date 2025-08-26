@@ -1,3 +1,27 @@
+#Pattern syntax checker
+import java.io.*;
+import java.util.*;
+import java.util.regex.*;
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int totalinp = sc.nextInt();
+        sc.nextLine();
+        for(int i =0;i<totalinp;i++){
+            String inp = sc.nextLine();
+            try{
+               Pattern.compile(inp);
+               System.out.println("Valid");
+            }catch(Exception e){
+                  System.out.println("Invalid");
+
+            }
+        }
+
+    }
+}
 #Java String Tokens
 
 import java.io.*;

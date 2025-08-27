@@ -1,3 +1,32 @@
+#Java regex
+import java.io.*;
+import java.util.*;
+
+class MyRegex{
+    
+    public String pattern =
+        "^(25[0-5]|2[0-4][0-9]|1[0-9]{2}|0[0-9]{2}|[0-9]{1,2})"
+      + "(\\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|0[0-9]{2}|[0-9]{1,2})){3}$";
+}
+
+    
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        MyRegex obj = new MyRegex();
+        
+        while(sc.hasNext()){
+           String ip= sc.next();
+           System.out.println(ip.matches(obj.pattern));
+        
+
+    }
+    sc.close();
+    }
+}
+
 #Pattern syntax checker
 
 import java.io.*;

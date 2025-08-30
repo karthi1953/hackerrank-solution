@@ -1,4 +1,75 @@
+#plus minus
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'plusMinus' function below.
+     *
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+    public static void plusMinus(List<Integer> arr,int n) {
+        int pos=0;
+        int neg=0;
+        int zer=0;
+        double posf=0;
+        double negf=0;
+        double zerf=0;
+        for(int a:arr){
+            if(a<0){
+                neg=neg+1;
+            }
+            else if(a>0){
+                pos=pos+1;
+            }
+            else{
+                zer=zer+1;
+            }
+
+        
+            
+        }
+        posf =(double) pos/n;
+        negf= (double)neg/n;
+        zerf=(double)zer/n;
+        System.out.printf("%.6f%n", posf);
+        System.out.printf("%.6f%n", negf);
+        System.out.printf("%.6f%n", zerf);
+
+
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+            .map(Integer::parseInt)
+            .collect(toList());
+
+        Result.plusMinus(arr,n);
+
+        bufferedReader.close();
+    }
+}
+
 #Java primality test
+
 import java.io.*;
 import java.math.*;
 import java.security.*;

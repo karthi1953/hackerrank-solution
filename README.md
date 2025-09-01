@@ -1,4 +1,4 @@
-min max
+min max sum
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -20,30 +20,21 @@ class Result {
      */
 
     public static void miniMaxSum(List<Integer> arr) {
-       int tot;
-        int small = Integer.MAX_VALUE; 
-        int large = Integer.MIN_VALUE;
+               long total = 0;
+        long small = Long.MAX_VALUE;
+        long large = Long.MIN_VALUE;
 
-        for(int i=0;i<arr.size();i++){
-        tot=0;
-            for(int j=0;j<arr.size();j++){
-                if(j!=i){
-                tot=tot+arr.get(j);
-
-
-
-
-                }
-            }
-                if(small>tot){
-                    small=tot;
-                }
-                if(large<tot){
-                    large=tot;
-                }
-
- 
+        for (int num : arr) {
+            total += num;
         }
+
+        for (int num : arr) {
+            long currentSum = total - num; 
+            if (currentSum < small) small = currentSum;
+            if (currentSum > large) large = currentSum;
+        }
+ 
+        
             System.out.println(small+" "+large);
 
 

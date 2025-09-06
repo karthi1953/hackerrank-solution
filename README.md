@@ -1,3 +1,43 @@
+#Java arraylist
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner sc=new Scanner(System.in);
+        
+        int n=sc.nextInt();
+        int[][] arr=new int[n][];
+
+        for (int i = 0; i <n ; i++) {
+            int nn=sc.nextInt();
+            arr[i]=new int[nn];
+            for (int j = 0; j < nn; j++) {
+                
+                arr[i][j]=sc.nextInt();
+
+            }
+        }
+        int n2=sc.nextInt();
+        
+
+        for (int i = 0; i <n2; i++) {
+            int x=sc.nextInt();
+            int y=sc.nextInt();
+            try{
+                System.out.println(arr[x-1][y-1]);
+            }catch(Exception e){
+                System.out.println("ERROR!");
+            }
+        }
+    
+        
+    }
+}
+
 #Breaking the records
     public static List<Integer> breakingRecords(List<Integer> scores) {
         int hs=scores.get(0);

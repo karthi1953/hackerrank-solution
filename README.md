@@ -1,3 +1,29 @@
+#Breaking the records
+    public static List<Integer> breakingRecords(List<Integer> scores) {
+        int hs=scores.get(0);
+        int ls=scores.get(0);
+        int hschanges=0;
+        int lschanges=0;
+        List<Integer> ret=new ArrayList<Integer>();
+        for (int i = 0; i < scores.size(); i++) {
+            
+            if(hs<scores.get(i)){
+                hs=scores.get(i);
+                hschanges++;
+            }else if(ls>scores.get(i)){
+                ls=scores.get(i);
+                lschanges++;
+
+            }
+
+
+        }
+        ret.add(hschanges);
+        ret.add(lschanges);
+        return ret;
+
+    }
+
 # Number line jumbs (kangaroo)
 import java.io.*;
 import java.math.*;

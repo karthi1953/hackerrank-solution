@@ -1,3 +1,30 @@
+#Bill division
+
+class Result {
+
+
+
+    public static void bonAppetit(List<Integer> bill, int k, int b) {
+        int add=0;
+        for (int i = 0; i < bill.size(); i++) {
+            if(i!=k){
+                add=add+bill.get(i);
+            }
+        }
+        add=add/2;
+        if(add==b){
+            System.out.println("Bon Appetit");
+        }else{
+        System.out.println(b-add);
+
+        }
+
+
+    }
+
+}
+
+
 #Java arraylist
 import java.io.*;
 import java.util.*;

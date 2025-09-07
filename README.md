@@ -1,5 +1,4 @@
 #Bill division
-
 class Result {
 
     public static void bonAppetit(List<Integer> bill, int k, int b) {

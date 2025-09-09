@@ -1,3 +1,22 @@
+#Migratory birds
+public static int migratoryBirds(List<Integer> arr) {
+        int[] countarr= new int[6];
+        
+        for(int a:arr){
+            countarr[a]++;
+        }
+        int ans=1;
+        int maxv=countarr[1];
+        for(int i=2;i<countarr.length;i++){
+           if(countarr[i]>maxv){
+            maxv=countarr[i];
+              ans=i;
+           }
+        }
+            return ans;
+    }
+
+
 #Day of programmer
     public static String dayOfProgrammer(int year) {
         

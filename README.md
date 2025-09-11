@@ -1,4 +1,3 @@
-
 #Migratory birds
 public static int migratoryBirds(List<Integer> arr) {
         int[] countarr= new int[6];

@@ -1,3 +1,26 @@
+#Cats and Mouse
+public class Solution {
+
+    // Complete the catAndMouse function below.
+    static String catAndMouse(int a, int b, int m) {
+    
+        int dista=m-a;
+        int distb=m-b;
+        if(dista<0){
+            dista=dista*(-1);
+        }
+        if(distb<0){
+            distb=distb*(-1);
+        }
+        
+        if(dista>distb){
+            return "Cat B";
+        }
+        if(dista<distb){
+            return "Cat A";
+        }
+        return "Mouse C";
+    }
 #Migratory birds
 
 public static int migratoryBirds(List<Integer> arr) {

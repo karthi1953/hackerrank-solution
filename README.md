@@ -1,3 +1,39 @@
+#Sales by match
+class Result {
+    
+    public static int linear(List<Integer> ar,int target,int index){
+        
+        for (int i = index+1; i < ar.size(); i++) {
+            if(ar.get(i)==target){
+                return i;
+            }
+        }
+                    return -1;
+    }
+
+   
+
+    public static int sockMerchant(int n, List<Integer> ar) {
+        int pair=0;
+        for (int j = 0; j < ar.size(); j++) {
+             int val=linear(ar,ar.get(j),j);
+             if(ar.get(j)==-99){
+                continue;
+             }
+            if(val>=0){
+                pair++;
+                ar.set(val, -99);
+                ar.set(j,-99);
+            }
+        }
+           
+
+        
+        return pair;
+
+    }
+
+}
 #Divisible sum pairs
 public static int divisibleSumPairs(int n, int k, List<Integer> ar) {
        int count=0;

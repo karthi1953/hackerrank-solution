@@ -1,7 +1,5 @@
 #Cats and Mouse
 public class Solution {
-
-    // Complete the catAndMouse function below.
     static String catAndMouse(int a, int b, int m) {
     
         int dista=m-a;

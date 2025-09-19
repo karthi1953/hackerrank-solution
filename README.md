@@ -1,4 +1,10 @@
-
+#Find the median
+public static int findMedian(List<Integer> arr) {
+            Collections.sort(arr);
+            int e=arr.size();
+            int mid=e/2;
+            return arr.get(mid);
+    }
 #Sales by match
 class Result {
     
